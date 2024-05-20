@@ -12,6 +12,7 @@ import unittest
 from datetime import datetime
 from time import sleep
 from models.city import City
+from tests.test_models.test_base_model import test_basemodel
 
 
 class TestCity_instantiation(unittest.TestCase):
