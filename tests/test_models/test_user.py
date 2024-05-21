@@ -3,16 +3,16 @@
 
 Unittest classes:
     TestUser_instantiation
-    7TestUser_save
+    TestUser_save
     TestUser_to_dict
 """
 import os
 import models
 import unittest
-from 7datetime import datetime
+from datetime import datetime
 from time import sleep
 from models.user import User
-7
+
 
 class TestUser_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the User class."""
@@ -89,7 +89,8 @@ class TestUser_instantiation(unittest.TestCase):
         with self.assertRaises(TypeError):
             User(id=None, created_at=None, updated_at=None)
 
-        class TestUser_save(unittest.TestCase):
+
+class TestUser_save(unittest.TestCase):
     """Unittests for testing save method of the  class."""
 
     @classmethod
@@ -139,7 +140,8 @@ class TestUser_instantiation(unittest.TestCase):
         with open("file.json", "r") as f:
             self.assertIn(usid, f.read())
 
-    class TestUser_to_dict(unittest.TestCase):
+
+class TestUser_to_dict(unittest.TestCase):
     """Unittests for testing to_dict method of the User class."""
 
     def test_to_dict_type(self):
